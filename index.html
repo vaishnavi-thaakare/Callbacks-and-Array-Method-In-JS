@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Section-22</h1>
+    <h2<a href="section-23.html">Section-23</a></h2>
+    <h2><a href="section-24.html">Section-23</a></h2>
+    <ol>
+        <li>Callbacks and Array Methods</li>
+    </ol>
+
+
+
+
+
+
+
+
+    <hr>
+    <h3>@ callbacks and array methods</h3>
+    let array = [1, 8, 9, 6, 3, 65];
+console.log(array);
+array.forEach(function (item) {
+    console.log(item)
+
+});
+<hr>
+<h3>@ Map Function</h3>
+let object1 = [
+    {
+        userName: "neha",
+        score:20
+    },
+    {
+        userName: "payal",
+        score:20
+    },
+    {
+        userName: "shamli",
+        score:20
+    },
+    {
+        userName: "ketaki",
+        score:20
+    },
+    {
+        userName: "reena",
+        score:20
+    }
+]
+
+object1.map(function (object1) {
+    console.log(object1.userName)
+})
+
+
+let array = [45, 7, 9, 65, 12, 41, 36];
+array.map(function (i) {
+    console.log(i*2)
+})
+    
+<hr>
+<h3>@ Exercise-1</h3>
+let fullName = [
+    {
+        firstName: "Vaishnavi",
+        lastName: " Thakare "
+    },
+    {
+        firstName: "payal",
+        lastName: " Gandhi "
+    },
+    {
+        firstName: "Shamali",
+        lastName: " Jagtap "
+    },
+    {
+        firstName: "Soniya",
+        lastName: " Rathi "
+    }
+]
+
+fullName.map(function (fullName) {
+    console.log(fullName.firstName)
+})
+
+<hr>
+<h3>@ Arrow function</h3>
+let add = (x,y) => {
+    console.log(`The sum of two number is ${x+y}`)
+}
+add(3,7)
+
+
+<hr>
+<h3>@ Implicit Return </h3>
+<p>It removes return keyword and convert {} into ()</p>
+<p> It work only in case of one single expresssion is there and only one value to be return.</p>
+
+const roolDie = () => (
+   Math.floor(Math.random()*10)+1
+
+)   
+let result = roolDie(12);
+console.log(result)
+
+
+<p> One liner code</p>
+let add = (x, y) => x + y;
+console.log(add(7,8))
+
+
+
+<p>Confuse about one liner arrow function</p>
+
+<hr>
+<h3>@ Arrow Function WrapUp</h3>
+
+
+var array = [
+    {
+        userName:"Vaishnavi",
+        rollNo:15
+    },
+    {
+        userName:"payal",
+        rollNo:45
+    },{
+        userName:"nikita",
+        rollNo:78
+    },
+    {
+        userName:"trupti",
+        rollNo:75
+    },
+    {
+        userName:"neha",
+        rollNo:1
+    },
+]
+
+array.map(function (array) {
+    console.log(`${array.userName} roll no is ${array.rollNo}`)
+})
+
+
+array.map((array) => {
+    console.log(`${array.userName} roll no is ${array.rollNo}`)
+})
+
+<hr>
+<h3>@ Settimeout and setTimeInterval</h3>
+setInterval(() => {
+    console.log("vaishnavi ")
+    
+}, 2000);
+
+
+
+setTimeout(() => {
+    console.log(" Utterwisee technology")
+    
+}, 4000);
+
+<hr>
+<h3>@ Filter - </h3>
+
+let validUserNames=["mark","vaishnavi145","fs5765676760","Moanfoam","payal","simathakare","nikita"]
+
+validUserNames.filter(i=>{
+    if (i.length < 10) {
+        console.log(i)
+    }
+})
+
+
+let validUserNames=["mark","vaishnavi145","fs5765676760","Moanfoam","payal","simathakare","nikita"]
+
+validUserNames.filter(function greaterThanTen(i) {
+    if (i.length < 10) {
+        console.log(i)
+    }
+})
+
+
+
+<hr>
+<h3>@ Some and every</h3>
+<p>It will return true of false value</p>
+let array = [2, 4, 6, 8, 10, 12, 14, 16];
+array.some((num)=> {
+    if(num% 2 === 0){
+    console.log(`All numbers are even `)
+    }
+
+    
+})
+
+
+let array = [1, 8, 9, 6, 4, 5, 5];
+let total = 0;
+let result=array.reduce(function sum(num) {
+    total = total + num;
+    return total
+    
+})
+console.log(result)
+
+
+
+
+let result = array.reduce((total, sum) => { return total + sum })
+console.log(result)
+
+
+<hr>
+<h3>@ this keyword in array</h3>
+<p> In normal expression</p>
+const object = {
+    userName: "Vaishnavi",
+    lastName: "Thakare",
+    identity: function fullName () {
+       return`${object.userName}  ${object.lastName}`
+      
+    }
+}
+console.log(object.identity())
+
+
+const object = {
+    userName: "Vaishnavi",
+    lastName: "Thakare",
+    identity: ()=> {
+       console.log(this)
+      
+    }
+}
+console.log(object.identity())
+<button id="para">click me </button>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="app.js"></script>
+    
+</body>
+</html>
